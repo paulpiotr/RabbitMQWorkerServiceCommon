@@ -1,2 +1,2 @@
 # RabbitMQWorkerServiceCommon
-Wspólna serwis Rabbit MQ Worker Service Common
+Wspólny serwis Rabbit MQ Worker Service Common
