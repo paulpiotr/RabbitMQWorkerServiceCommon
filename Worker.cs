@@ -41,7 +41,7 @@ namespace RabbitMQWorkerServiceCommon
                 {
                     //rabbitMQPublisherCommonPublishMutex  = RabbitMQReceiverCommon.RabbitMQReceiverCommon.CreateMutexAndReceiveMessages("RabbitMQPublisherCommonPublish");
                 }
-                _log4net.Debug($"Sleep { delay } s");
+                //_log4net.Debug($"Sleep { delay } s");
                 await Task.Delay(1000 * delay, stoppingToken);
             }
         }
