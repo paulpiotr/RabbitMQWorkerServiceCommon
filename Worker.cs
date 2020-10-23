@@ -11,12 +11,12 @@ namespace RabbitMQWorkerServiceCommon
     public class Worker : BackgroundService
     {
 
-        #region private static readonly log4net.ILog _log4net
+        #region private static readonly log4net.ILog log4net
 #if !NET48
         /// <summary>
         /// Log4 Net Logger
         /// </summary>
-        private static readonly log4net.ILog _log4net = Log4netLogger.Log4netLogger.GetLog4netInstance(MethodBase.GetCurrentMethod().DeclaringType);
+        private static readonly log4net.ILog log4net = Log4netLogger.Log4netLogger.GetLog4netInstance(MethodBase.GetCurrentMethod().DeclaringType);
 #endif
         #endregion
 
@@ -41,7 +41,7 @@ namespace RabbitMQWorkerServiceCommon
                 {
                     //rabbitMQPublisherCommonPublishMutex  = RabbitMQReceiverCommon.RabbitMQReceiverCommon.CreateMutexAndReceiveMessages("RabbitMQPublisherCommonPublish");
                 }
-                //_log4net.Debug($"Sleep { delay } s");
+                //log4net.Debug($"Sleep { delay } s");
                 await Task.Delay(1000 * delay, stoppingToken);
             }
         }
